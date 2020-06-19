@@ -41,6 +41,7 @@ document.getElementById("main-rename").onclick = function() {
 
 document.getElementById("main-logout").onclick = function() {
   logout = true;
+  refresh();
 }
 
 function refresh(json) {
