@@ -33,8 +33,13 @@ document.getElementById("main-rename").onclick = function() {
 }
 
 function refresh(json) {
+if (json) {
   document.getElementById("main-amount").innerHTML = json.amount;
   document.getElementById("main-username").innerHTML = json.name;
+} else {
+  location.href = "register.html?name=" + getParam("name");
+}
+
 }
 
 function pullFromDb() {
@@ -59,6 +64,7 @@ function rename() {
     return;
   } else {
     latest.name = person;
+    location.href = "index.html?id=" + userid + "&name=" + latest.name;
     pushToDb(latest);
   }
 }

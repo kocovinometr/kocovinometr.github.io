@@ -21,7 +21,7 @@ const dbref = firebase.database().ref('users/' + userid);
 dbref.on('value', function(snapshot) {
   console.log(snapshot.val());
   console.log(snapshot.val().name);
-  window.setTimeout(function() {location.href = "index.html?id=" + userid;}, 1000);
+  window.setTimeout(function() {location.href = "index.html?id=" + userid + "&name=" + getParam("name")}, 1000);
 });
 
 
