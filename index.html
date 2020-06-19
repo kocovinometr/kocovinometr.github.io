@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Kocovinometr</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-components-web@6.0.0/dist/material-components-web.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/material-components-web@6.0.0/dist/material-components-web.min.js"></script>
+
+  <link rel="stylesheet" href="welcome.min.css">
+  <script src="welcome.js" defer></script>
+</head>
+
+<body>
+  <div class="mdc-card mdc-card--outlined" id="welcome">
+    <div class="mdc-card__main">
+      <h1 class="mdc-typography--headline4 main-title">Kocovinometr</h1>
+      <label class="mdc-text-field mdc-text-field--outlined" id="welcome-jmeno">
+        <input type="text" class="mdc-text-field__input" aria-labelledby="welcome-jmeno-label" required>
+        <span class="mdc-notched-outline">
+          <span class="mdc-notched-outline__leading"></span>
+          <span class="mdc-notched-outline__notch">
+            <span class="mdc-floating-label" id="welcome-jmeno-label">Vaše jméno (nebo přezdívka)</span>
+          </span>
+          <span class="mdc-notched-outline__trailing"></span>
+        </span>
+      </label>
+    </div>
+    <div class="mdc-card__actions">
+      <button class="mdc-button mdc-button--unelevated" id="welcome-submit">
+        <div class="mdc-button__ripple"></div>
+        <span class="mdc-button__label">Další</span>
+      </button>
+    </div>
+    <div class="mdc-card__info">
+      <p>
+        Kocovinometr je interaktivní "hra", ve které zaznamenáváte každou skleničku, kterou vypijete. Vaše úspěchy se potom zobrazí na tabuli. Vyhraje ten, kdo toho vypil nejvíc.
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

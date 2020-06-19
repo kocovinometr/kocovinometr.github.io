@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Kocovinometr</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-components-web@6.0.0/dist/material-components-web.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/material-components-web@6.0.0/dist/material-components-web.min.js"></script>
+
+
+  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.2/firebase-database.js"></script>
+
+
+  <link rel="stylesheet" href="app.min.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <div class="mdc-card mdc-card--outlined" id="main">
+    <div class="mdc-card__main">
+      <h1 class="mdc-typography--headline4 main-title">Kocovinometr</h1>
+      <div class="mdc-typography--headline4 main-title" id="main-amount"></div>
+    </div>
+    <div class="mdc-card__select">
+      <label for="main-slider">Kolik decilitrů jste vypili?</label>
+    </div>
+    <div class="mdc-card__actions">
+      <button class="mdc-fab" onclick="updateDl(1)">
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__icon">1</span>
+      </button>
+      <button class="mdc-fab" onclick="updateDl(2)">
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__icon">2</span>
+      </button>
+      <button class="mdc-fab" onclick="updateDl(3)">
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__icon">3</span>
+      </button>
+      <button class="mdc-fab" onclick="updateDl(4)">
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__icon">4</span>
+      </button>
+      <button class="mdc-fab" onclick="updateDl(5)">
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__icon">5</span>
+      </button>
+    </div>
+    <div class="mdc-card__actions">
+      <button class="mdc-fab" onclick="updateDl(-1)">
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__icon">-1</span>
+      </button>
+      <button class="mdc-fab" onclick="updateDl(-2)">
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__icon">-2</span>
+      </button>
+      <button class="mdc-fab" onclick="updateDl(-3)">
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__icon">-3</span>
+      </button>
+      <button class="mdc-fab" onclick="updateDl(-4)">
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__icon">-4</span>
+      </button>
+      <button class="mdc-fab" onclick="updateDl(-5)">
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__icon">-5</span>
+      </button>
+    </div>
+    <div class="mdc-card__info">
+      <div id="main-username"></div>
+      <a id="main-rename">Přejmenovat</a>
+    </div>
+</body>
+
+</html>
