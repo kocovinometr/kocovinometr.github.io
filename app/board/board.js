@@ -12,13 +12,23 @@ firebase.initializeApp(firebaseConfig);
 
 const realdb = firebase.database();
 const userid = getParam("id");
-let latest = {};
+let latest = {}, isqrshow = false;
 
 const dbref = firebase.database().ref('users');
 dbref.on('value', function(snapshot) {
   latest = snapshot.val();
   refresh(latest);
 });
+
+document.onclick = function() {
+  if (isqrshow) {
+    document.body.classList.remove("qr");
+    isqrshow = false;
+  } else {
+    document.body.classList.add("qr");
+    isqrshow = true;
+  }
+}
 
 function generateHTML(data, ismain) {
   let html = "",
