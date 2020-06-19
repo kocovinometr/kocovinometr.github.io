@@ -9,23 +9,23 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-const realdb = firebase.database();
-const userid = makeid(10);
+const realdb = firebase.database(),
+  userid = makeid(10);
 
 firebase.database().ref('users/' + userid).set({
-    name: getParam("name"),
-    amount: 0
-  });
+  name: getParam("name"),
+  amount: 0,
+  logout: false
+});
 
 const dbref = firebase.database().ref('users/' + userid);
 dbref.on('value', function(snapshot) {
   console.log(snapshot.val());
   console.log(snapshot.val().name);
-  window.setTimeout(function() {location.href = "index.html?id=" + userid + "&name=" + getParam("name")}, 1000);
+  window.setTimeout(function() {
+    location.href = "index.html?id=" + userid + "&name=" + getParam("name")
+  }, 1000);
 });
-
-
-
 
 function getParam(param) {
   var url_string = window.location.href;
@@ -34,11 +34,11 @@ function getParam(param) {
 }
 
 function makeid(length) {
-   var result           = '';
-   var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-   var charactersLength = characters.length;
-   for ( var i = 0; i < length; i++ ) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-   }
-   return result;
+  var result = '';
+  var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  var charactersLength = characters.length;
+  for (var i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
 }

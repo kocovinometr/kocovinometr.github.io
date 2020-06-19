@@ -10,11 +10,19 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-const realdb = firebase.database();
-const userid = getParam("id");
-let latest = {};
+const realdb = firebase.database(),
+  userid = getParam("id");
+let latest = {},
+  logout = false;
 
+var addRipples = true;
+if (addRipples) {
+  document.querySelectorAll(".mdc-button, .mdc-fab").forEach(function(elem) {
+    new mdc.ripple.MDCRipple(elem);
+  });
+}
 
+const snackbar = new mdc.snackbar.MDCSnackbar(document.getElementById("snackbar"));
 
 const dbref = firebase.database().ref('users/' + userid);
 dbref.on('value', function(snapshot) {
@@ -22,27 +30,36 @@ dbref.on('value', function(snapshot) {
   refresh(latest);
 });
 
-
-const exampledb = {
-  name: "Jan Brabec",
-  amount: 10
+function openSnack(text) {
+  document.getElementById("snackbar").querySelector(".mdc-snackbar__label").innerHTML = text;
+  snackbar.open();
 }
 
 document.getElementById("main-rename").onclick = function() {
   rename();
 }
 
+document.getElementById("main-logout").onclick = function() {
+  logout = true;
+}
+
 function refresh(json) {
-if (json) {
-  document.getElementById("main-amount").innerHTML = json.amount;
-  document.getElementById("main-username").innerHTML = json.name;
-} else {
-  location.href = "register.html?name=" + getParam("name");
-}
-
-}
-
-function pullFromDb() {
+  if (json) {
+    if (json.logout) {
+      logout = true;
+      firebase.database().ref('users/' + userid).remove();
+    } else {
+      document.getElementById("main-amount").innerHTML = json.amount;
+      document.getElementById("main-username").innerHTML = json.name;
+    }
+  } else {
+    if (logout) {
+      firebase.database().ref('users/' + userid).remove();
+      location.href = "../index.html";
+    } else {
+      location.href = "register.html?name=" + getParam("name");
+    }
+  }
 
 }
 
@@ -53,8 +70,15 @@ function pushToDb(json) {
 function updateDl(mod) {
   latest.amount += mod;
   if (latest.amount < 0) {
-    latest.amount = 0;  }
+    latest.amount = 0;
+  }
   pushToDb(latest);
+  if (mod == 1) {
+    openSnack("Přidejte, takto vás předběhnou!");
+  }
+  if (mod == 5) {
+    openSnack("Páni, vy dneska válíte!");
+  }
 }
 
 function rename() {

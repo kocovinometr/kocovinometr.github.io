@@ -5,3 +5,10 @@ document.getElementById("welcome-submit").onclick = function() {
     location.href = "app/register.html?name=" + nameTextField.value;
   }
 }
+
+var addRipples = true;
+  if (addRipples) {
+    document.querySelectorAll(".mdc-button, .mdc-fab").forEach(function(elem) {
+      new mdc.ripple.MDCRipple(elem);
+    });
+  }

@@ -11,14 +11,17 @@
   min-height: calc(100% - 20px);
   width: calc(100% - 20px);
   padding: 20px;
+
   .mdc-card__main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
+
   .title {
     width: 100%;
   }
+
   .player {
     padding: 20px;
     margin: 10px;
@@ -26,10 +29,15 @@
     width: 100%;
     max-width: 225px;
   }
-  .title, .top, .name, .amount {
+
+  .amount,
+  .name,
+  .title,
+  .top {
     font-family: "Product Sans", "Roboto", Helvetica, Arial, sans-serif !important;
     text-align: center;
   }
+
   .amount {
     &::after {
       content: "dl";
