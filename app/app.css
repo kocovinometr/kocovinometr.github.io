@@ -1,0 +1,72 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
+* {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#main {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  max-width: 400px;
+  margin: 0 auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#main #main-amount {
+  margin: 10px 0;
+}
+
+#main #main-amount::after {
+  content: "dl";
+}
+
+#main .mdc-card__select {
+  padding: 20px;
+}
+
+#main .mdc-card__main {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#main .mdc-card__actions {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#main .main-title {
+  font-family: "Open Sans", "Roboto", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+#main .mdc-card__info {
+  padding: 20px;
+  text-align: left;
+  color: grey;
+}
+
+#main .mdc-card__info #main-username::before {
+  content: "Hráč: ";
+}
+
+#main .mdc-card__info a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+/*# sourceMappingURL=app.css.map */

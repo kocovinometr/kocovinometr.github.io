@@ -1,1 +1,85 @@
-@import url("https://fonts.googleapis.com/css2?family=Product+Sans&family=Roboto&display=swap");*{font-family:"Roboto", Helvetica, Arial, sans-serif}#board{position:fixed;top:10px;left:10px;min-height:calc(100% - 20px);width:calc(100% - 20px);padding:20px;overflow:auto;transition:height 0.5s, min-height 0.5s}#board .mdc-card__main{display:flex;justify-content:center;flex-wrap:wrap}#board .title{width:100%}#board .player{padding:20px;margin:10px;text-align:center;width:100%;max-width:225px}#board .amount,#board .name,#board .title,#board .top{font-family:"Product Sans", "Roboto", Helvetica, Arial, sans-serif !important;text-align:center}#board .amount::after{content:"dl"}#links{position:fixed;bottom:-70px;left:10px;height:60px;width:calc(100% - 20px);padding:14px;overflow:hidden;transition:bottom 0.5s}#links .mdc-card__main{display:flex;align-content:center}#links .mdc-card__main span{margin-right:15px}#qr{position:fixed;bottom:90px;right:-120px;transition:right 0.5s}.qr #links{bottom:10px}.qr #qr{right:20px}.qr #board{min-height:calc(100% - 20px - 70px) !important;height:calc(100% - 20px - 70px)}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
+* {
+    font-family: "Roboto", Helvetica, Arial, sans-serif
+}
+
+#board {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    min-height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    padding: 20px;
+    overflow: auto;
+    transition: height 0.5s, min-height 0.5s
+}
+
+#board .mdc-card__main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+#board .title {
+    width: 100%
+}
+
+#board .player {
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 225px
+}
+
+#board .amount,
+#board .name,
+#board .title,
+#board .top {
+    font-family: "Open Sans", "Roboto", Helvetica, Arial, sans-serif !important;
+    text-align: center
+}
+
+#board .amount::after {
+    content: "dl"
+}
+
+#links {
+    position: fixed;
+    bottom: -70px;
+    left: 10px;
+    height: 60px;
+    width: calc(100% - 20px);
+    padding: 14px;
+    overflow: hidden;
+    transition: bottom 0.5s
+}
+
+#links .mdc-card__main {
+    display: flex;
+    align-content: center
+}
+
+#links .mdc-card__main span {
+    margin-right: 15px
+}
+
+#qr {
+    position: fixed;
+    bottom: 90px;
+    right: -120px;
+    transition: right 0.5s
+}
+
+.qr #links {
+    bottom: 10px
+}
+
+.qr #qr {
+    right: 20px
+}
+
+.qr #board {
+    min-height: calc(100% - 20px - 70px) !important;
+    height: calc(100% - 20px - 70px)
+}

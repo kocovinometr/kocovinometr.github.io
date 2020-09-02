@@ -1,63 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Product+Sans&family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
 * {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
 }
 
 #main {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  height: calc(100% - 20px);
-  width: calc(100% - 20px);
-  max-width: 400px;
-  margin: 0 auto;
-  transform: translateX(-50%);
-
-  #main-amount {
-    margin: 10px 0;
-
-    &::after {
-      content: "dl";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    max-width: 400px;
+    margin: 0 auto;
+    transform: translateX(-50%);
+    #main-amount {
+        margin: 10px 0;
+        &::after {
+            content: "dl";
+        }
     }
-  }
-
-  .mdc-card__select {
-    padding: 20px;
-  }
-
-  .mdc-card__main {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-  }
-
-  .mdc-card__actions {
-    justify-content: center;
-    padding: 10px;
-    flex-wrap: wrap;
-  }
-
-  .main-title {
-    font-family: "Product Sans", "Roboto", Helvetica, Arial, sans-serif;
-    text-align: center;
-  }
-
-  .mdc-card__info {
-    padding: 20px;
-    text-align: left;
-    color: grey;
-
-    #main-username {
-      &::before {
-        content: "Hráč: ";
-      }
+    .mdc-card__select {
+        padding: 20px;
     }
-
-    a {
-      text-decoration: underline;
-      cursor: pointer;
+    .mdc-card__main {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
     }
-  }
+    .mdc-card__actions {
+        justify-content: center;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+    .main-title {
+        font-family: "Open Sans", "Roboto", Helvetica, Arial, sans-serif;
+        text-align: center;
+    }
+    .mdc-card__info {
+        padding: 20px;
+        text-align: left;
+        color: grey;
+        #main-username {
+            &::before {
+                content: "Hráč: ";
+            }
+        }
+        a {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
 }

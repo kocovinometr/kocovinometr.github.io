@@ -1,1 +1,60 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=Product+Sans&family=Roboto&display=swap");*{font-family:"Roboto", Helvetica, Arial, sans-serif}#main{position:absolute;top:10px;left:50%;height:calc(100% - 20px);width:calc(100% - 20px);max-width:400px;margin:0 auto;transform:translateX(-50%)}#main #main-amount{margin:10px 0}#main #main-amount::after{content:"dl"}#main .mdc-card__select{padding:20px}#main .mdc-card__main{padding:20px;display:flex;flex-direction:column;box-sizing:border-box}#main .mdc-card__actions{justify-content:center;padding:10px;flex-wrap:wrap}#main .main-title{font-family:"Product Sans", "Roboto", Helvetica, Arial, sans-serif;text-align:center}#main .mdc-card__info{padding:20px;text-align:left;color:grey}#main .mdc-card__info #main-username::before{content:"Hráč: "}#main .mdc-card__info a{text-decoration:underline;cursor:pointer}
+﻿@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
+* {
+    font-family: "Roboto", Helvetica, Arial, sans-serif
+}
+
+#main {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    max-width: 400px;
+    margin: 0 auto;
+    transform: translateX(-50%)
+}
+
+#main #main-amount {
+    margin: 10px 0
+}
+
+#main #main-amount::after {
+    content: "dl"
+}
+
+#main .mdc-card__select {
+    padding: 20px
+}
+
+#main .mdc-card__main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box
+}
+
+#main .mdc-card__actions {
+    justify-content: center;
+    padding: 10px;
+    flex-wrap: wrap
+}
+
+#main .main-title {
+    font-family: "Open Sans", "Roboto", Helvetica, Arial, sans-serif;
+    text-align: center
+}
+
+#main .mdc-card__info {
+    padding: 20px;
+    text-align: left;
+    color: grey
+}
+
+#main .mdc-card__info #main-username::before {
+    content: "Hráč: "
+}
+
+#main .mdc-card__info a {
+    text-decoration: underline;
+    cursor: pointer
+}
